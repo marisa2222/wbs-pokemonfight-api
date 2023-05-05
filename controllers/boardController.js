@@ -23,8 +23,9 @@ exports.createUser = async (req,res,next) => {
 
 exports.getAllGames = async (req, res, next) => {
     try {
-        const allGames = await Game.find().populate('user', '_id username');
-        res.json(allGames)
+       // const allGames = await Game.find().populate('user', '_id username');
+        //res.json(allGames)
+        res.json({pokemonname: "pikachu"})
     } catch (e) {
         console.log(e);
         res.status(500).send(e.message)
